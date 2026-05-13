@@ -1,0 +1,20 @@
+# Byte Project .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Database
+backend/*.db
+
+# Static files
+backend/static/visuals/*
+!backend/static/visuals/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
