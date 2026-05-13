@@ -30,5 +30,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, "..", "static")
 FRONTEND_DIR = os.path.join(BASE_DIR, "..", "..", "frontend")
 
+# Ensure static directory exists
+os.makedirs(STATIC_DIR, exist_ok=True)
+
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
