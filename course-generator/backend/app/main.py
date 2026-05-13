@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from app.routes import courses
-from app.db.database import engine, Base
+from .routes import courses
+from .db.database import engine, Base
 
 # Create tables
 Base.metadata.create_all(bind=engine)

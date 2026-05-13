@@ -3,7 +3,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.units import inch
-from app.schemas.course import CourseOutput
+from ..schemas.course import CourseOutput
 from io import BytesIO
 
 def generate_course_pdf(course: CourseOutput) -> BytesIO:

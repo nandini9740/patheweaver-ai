@@ -1,14 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from sqlalchemy.orm import Session
-from app.schemas.course import CourseInput, CourseResponse, CourseOutput
-from app.services.gemini import generate_course_json
+from ..schemas.course import CourseInput, CourseResponse, CourseOutput
+from ..services.gemini import generate_course_json
 import os
 from urllib.parse import unquote
-from app.services.pdf import generate_course_pdf
-from app.db.database import get_db
-from app.models.course import Course
+from ..services.pdf import generate_course_pdf
+from ..db.database import get_db
+from ..models.course import Course
 from fastapi.responses import StreamingResponse
-from app.services.gemini import VISUAL_STORE
+from ..services.gemini import VISUAL_STORE
 
 router = APIRouter()
 

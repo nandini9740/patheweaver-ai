@@ -3,7 +3,7 @@ from google.genai import types
 import os
 import json
 from dotenv import load_dotenv
-from app.schemas.course import CourseInput, CourseOutput
+from ..schemas.course import CourseInput, CourseOutput
 from urllib.parse import quote
 import uuid
 from urllib.parse import unquote
